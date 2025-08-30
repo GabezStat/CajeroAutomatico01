@@ -1,7 +1,7 @@
 ﻿
 namespace Cajero_Automatico01
 {
-    partial class Form1
+    partial class MenuLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -33,7 +33,7 @@ namespace Cajero_Automatico01
             this.lblname = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbluser = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botoncontinuar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblw
@@ -61,7 +61,7 @@ namespace Cajero_Automatico01
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 196);
+            this.textBox1.Location = new System.Drawing.Point(107, 195);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 20);
             this.textBox1.TabIndex = 2;
@@ -78,29 +78,30 @@ namespace Cajero_Automatico01
             this.lbluser.Text = "Ingrese su primer nombre";
             this.lbluser.Click += new System.EventHandler(this.lbluser_Click);
             // 
-            // button1
+            // botoncontinuar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(135, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Continuar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botoncontinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botoncontinuar.Location = new System.Drawing.Point(135, 235);
+            this.botoncontinuar.Name = "botoncontinuar";
+            this.botoncontinuar.Size = new System.Drawing.Size(100, 37);
+            this.botoncontinuar.TabIndex = 4;
+            this.botoncontinuar.Text = "Continuar";
+            this.botoncontinuar.UseVisualStyleBackColor = true;
+            this.botoncontinuar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // MenuLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(409, 310);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botoncontinuar);
             this.Controls.Add(this.lbluser);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.lblw);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "Form1";
+            this.Name = "MenuLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Cajero Automático";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -115,7 +116,7 @@ namespace Cajero_Automatico01
         private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbluser;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botoncontinuar;
     }
 }
 

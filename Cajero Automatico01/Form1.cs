@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cajero_Automatico01
 {
-    public partial class Form1 : Form
+    public partial class MenuLogin : Form
     {
-        public Form1()
+        public MenuLogin()
         {
             InitializeComponent();
         }
@@ -41,5 +41,26 @@ namespace Cajero_Automatico01
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombre = textBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombre))
+            {
+                MessageBox.Show("Por favor ingrese su nombre antes de continuar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+            else
+            {
+                MenuTransacciones menu = new MenuTransacciones(nombre);
+                menu.Show();
+                this.Hide();
+
+            }
+}
     }
 }
+
+
