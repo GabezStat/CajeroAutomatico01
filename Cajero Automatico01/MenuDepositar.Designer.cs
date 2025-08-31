@@ -36,6 +36,7 @@ namespace Cajero_Automatico01
             this.NumeroAcct = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -115,12 +116,24 @@ namespace Cajero_Automatico01
             this.label3.Text = "$";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnRegresar.Location = new System.Drawing.Point(307, 383);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(84, 70);
+            this.btnRegresar.TabIndex = 6;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // MenuDepositar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(393, 455);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NumeroAcct);
@@ -143,5 +156,6 @@ namespace Cajero_Automatico01
         private System.Windows.Forms.TextBox NumeroAcct;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

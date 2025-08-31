@@ -93,5 +93,12 @@ namespace Cajero_Automatico01
                 this.Hide();   // Ocultar este formulario
                 frm.Show();    // Mostrar el siguiente formulario
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            MenuTransacciones menu = new MenuTransacciones("Usuario");
+            this.Hide();
+            menu.Show();
+        }
     }          
 }
