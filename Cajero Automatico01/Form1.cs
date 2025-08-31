@@ -12,6 +12,7 @@ namespace Cajero_Automatico01
 {
     public partial class MenuLogin : Form
     {
+
         public MenuLogin()
         {
             InitializeComponent();
@@ -44,23 +45,39 @@ namespace Cajero_Automatico01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nombre = textBox1.Text.Trim();
+            string NombreUsuario = BotonUsuario1.Text.Trim(); // Establece el texto en el botón
 
-            if (string.IsNullOrEmpty(nombre))
+            if (string.IsNullOrEmpty(NombreUsuario)) //Verifica que el campo del nombre del usuario no esté vacio
             {
                 MessageBox.Show("Por favor ingrese su nombre antes de continuar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return; // Si el usuario no ingresa su nombre, no se le permitirá continuar
 
             }
             else
             {
-                MenuTransacciones menu = new MenuTransacciones(nombre);
+                MenuTransacciones menu = new MenuTransacciones(NombreUsuario); /*Se crea una nueva instancia para poder transicionar al Menu de Transacciones una vez se reciba 
+                                                                                  el nombre de usuario*/
                 menu.Show();
                 this.Hide();
 
             }
 }
-    }
+
+        private void BotonUsuario1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /// Permitir teclas de control (borrar, tab, enter, etc.)
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            // Si el carácter es un número → bloquear
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+}
 }
 
 

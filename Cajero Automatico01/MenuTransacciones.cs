@@ -16,13 +16,28 @@ namespace Cajero_Automatico01
         public MenuTransacciones(string nombre)
         {
             InitializeComponent();
+
             usuario = nombre; //Asignamos el nombre que el usuario ingresará
-            lblwelcome.Text = $"Bienvenido a su banca {usuario}";  // Muestra el nombre en un Label
+            lblwelcome.Text = $"Escoga la transacción que desea realizar por favor: ";  // Muestra el nombre en un Label
         }
 
         private void MenuTransacciones_Load(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void lblwelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botondepositar_Click(object sender, EventArgs e)
+        {
+            MenuDepositar Depositar = new MenuDepositar();
+            this.Hide();       // Ocultamos el menú de transacciones
+            Depositar.Show();   // Mostramos la ventana de depósito
         }
     }
-}
+    }
+
