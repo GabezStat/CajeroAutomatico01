@@ -58,11 +58,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="MenuRetirar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="MenuRetirar.Designer.cs">
+      <DependentUpon>MenuRetirar.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuDepositar.cs">
       <SubType>Form</SubType>
@@ -86,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuDepositar.resx">
       <DependentUpon>MenuDepositar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuRetirar.resx">
+      <DependentUpon>MenuRetirar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuTransacciones.resx">
       <DependentUpon>MenuTransacciones.cs</DependentUpon>

@@ -80,6 +80,7 @@ namespace Cajero_Automatico01
             this.botonretirar.TabIndex = 2;
             this.botonretirar.Text = "Retirar";
             this.botonretirar.UseVisualStyleBackColor = false;
+            this.botonretirar.Click += new System.EventHandler(this.botonretirar_Click);
             // 
             // MenuTransacciones
             // 

@@ -38,6 +38,13 @@ namespace Cajero_Automatico01
             this.Hide();       // Ocultamos el menú de transacciones
             Depositar.Show();   // Mostramos la ventana de depósito
         }
+
+        private void botonretirar_Click(object sender, EventArgs e)
+        {
+            MenuRetirar retirar = new MenuRetirar();
+            this.Hide();       // esta accion va a ocultar el menu de transacciones
+            retirar.Show();    // esta accion va a mostrar la ventana de retiro
+        }
     }
     }
 
